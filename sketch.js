@@ -1,4 +1,4 @@
-var database_;
+var database;
 var balloon;
 var scaleV=1
 var Bmage
@@ -15,7 +15,7 @@ function setup() {
   balloon=createSprite(200,height-250, 50, 50);
  balloon.scale=scaleV
 balloon.addAnimation('walking',bImage1)
-database_= firebase.database();
+database= firebase.database();
 balloonPosition= database.ref("balloon/position")
     balloonPosition.on("value",readPosition,showError)
 }
